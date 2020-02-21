@@ -1,0 +1,100 @@
+<?php
+
+
+function ell_cranell_preprocess_breadcrumb(&$variables) {
+  $request = \Drupal::request();
+  $route_match = \Drupal::routeMatch();
+  $page_title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+
+  //this variable will avaliable in twig file.
+  $variables['breadcrumb'][] = array(
+    'text' => $page_title
+  );
+}
+
+
+function ell_cranell_preprocess_html(&$variables) {
+
+  $variables['page']['#attached']['html_head'][] = [[
+    '#tag' => 'link',
+    '#attributes' => [
+      'rel' => 'apple-touch-icon',
+      'href' => 'assets/images/favicon/114x114.png',
+      'size' => '57x57',
+    ],
+  ], 'apple-touch-icon_57'];
+
+  $variables['page']['#attached']['html_head'][] = [[
+    '#tag' => 'link',
+    '#attributes' => [
+      'rel' => 'apple-touch-icon',
+      'href' => 'assets/images/favicon/144x144.png',
+      'size' => '72x72',
+    ],
+  ], 'apple-touch-icon_72'];
+
+  $variables['page']['#attached']['html_head'][] = [[
+    '#tag' => 'link',
+    '#attributes' => [
+      'rel' => 'apple-touch-icon',
+      'href' => 'assets/images/favicon/152x152.png',
+      'size' => '76x76',
+    ],
+  ], 'apple-touch-icon_76'];
+
+  $variables['page']['#attached']['html_head'][] = [[
+    '#tag' => 'link',
+    '#attributes' => [
+      'rel' => 'apple-touch-icon',
+      'href' => 'assets/images/favicon/114x114.png',
+      'size' => '114x114',
+    ],
+  ], 'apple-touch-icon_114'];
+
+  $variables['page']['#attached']['html_head'][] = [[
+    '#tag' => 'link',
+    '#attributes' => [
+      'rel' => 'apple-touch-icon',
+      'href' => 'assets/images/favicon/120x120.png',
+      'size' => '120x120',
+    ],
+  ], 'apple-touch-icon_120'];
+
+  $variables['page']['#attached']['html_head'][] = [[
+    '#tag' => 'link',
+    '#attributes' => [
+      'rel' => 'apple-touch-icon',
+      'href' => 'assets/images/favicon/144x144.png',
+      'size' => '144x144',
+    ],
+  ], 'apple-touch-icon_144'];
+
+  $variables['page']['#attached']['html_head'][] = [[
+    '#tag' => 'link',
+    '#attributes' => [
+      'rel' => 'apple-touch-icon',
+      'href' => 'assets/images/favicon/152x152.png',
+      'size' => '152x152',
+    ],
+  ], 'apple-touch-icon_152'];
+
+  $variables['page']['#attached']['html_head'][] = [[
+    '#tag' => 'link',
+    '#attributes' => [
+      'rel' => 'apple-touch-icon',
+      'href' => 'assets/images/favicon/180x180.png',
+      'size' => '180x180',
+    ],
+  ], 'apple-touch-icon_180'];
+
+
+  // $variables['page']['#attached']['html_head'][] = [[
+  //   '#tag' => 'link',
+  //   '#attributes' => [
+  //     'rel' => 'stylesheet',
+  //     'href' => '//db.onlinewebfonts.com/c/3a47f5f06b5484abfeee9eac90348a9c?family=Gotham',
+  //     'type' => 'text/css',
+  //   ],
+  // ], 'fonts'];
+
+  };

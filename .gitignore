@@ -1,0 +1,12 @@
+.sass-cache
+.DS_Store
+
+node_modules
+bower_components
+
+themes/ell_cranell/assets/css/style.css
+themes/ell_cranell/assets/js/build.js
+themes/ell_cranell/assets/icons/grunticon
+
+vendor
+yarn.lock

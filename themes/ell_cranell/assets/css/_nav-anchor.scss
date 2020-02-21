@@ -1,0 +1,113 @@
+@keyframes preview {
+  0%{
+    opacity: 0;
+  }
+  5%{
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+nav.nav-anchor {
+  position: fixed;
+  right: $baseUnit;
+  top: 65%;
+  transform: translateY(-50%);
+  z-index: 100;
+  display: none;
+  @include media($breakLaptop){
+    display: block;
+  }
+  @include media(1400px){
+    right: 45px;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      padding: 0;
+      border: none;
+      &:last-of-type {
+        border: none;
+      }
+      &:after {
+        pointer-events: none;
+        display: none;
+      }
+      a {
+        width: 7px;
+        height: 7px;
+        background-color: $colorGrey3;
+        display: block;
+        margin: 18px 0;
+        position: relative;
+        &:before {
+          pointer-events: none;
+          content: '';
+          display: block;
+          position: absolute;
+          height: 16px;
+          width: 16px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%) scale(0);
+          background-color: $colorMain3;
+          opacity: 0;
+          transition: .1s ease-in-out;
+        }
+        &.is-active {
+          span {
+            animation: preview 1s ease-in-out;
+          }
+          &:before {
+            transform: translate(-50%,-50%) scale(1);
+            opacity: 1;
+          }
+        }
+        &:hover,
+        &.is-post {
+          background-color: $colorMain3;
+        }
+        &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          height: 22px;
+          width: 22px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          border-radius: 50%;
+        }
+        span {
+          @extend .heading-6;
+          opacity: 0;
+          position: absolute;
+          right: 100%;
+          top: 50%;
+          transform: translateY(-50%);
+          width: auto;
+          white-space: nowrap;
+          background-color: $colorWhite;
+          box-shadow: $baseShadow;
+          line-height: 32px;
+          padding: 0 $baseUnit;
+          margin-right: 12px;
+          pointer-events: none;
+          transition: .1s ease-in-out;
+        }
+        &:hover {
+          span {
+            opacity: 1;
+            z-index: 10;
+          }
+        }
+      }
+    }
+  }
+}

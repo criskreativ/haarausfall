@@ -1,0 +1,6 @@
+.result{
+  &__title{
+    @extend .heading-3;
+    margin-bottom: $baseUnit*1.5;
+  }
+}

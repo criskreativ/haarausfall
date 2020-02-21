@@ -1,0 +1,10 @@
+.wrapper{
+  max-width: $pageMaxWidth;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $baseUnit;
+  position: relative;
+  // @include media($breakDesktop){
+  //   padding: 0 $baseUnit;
+  // }
+}

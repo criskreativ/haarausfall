@@ -1,0 +1,21 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  <div class="gallery-logos {{ content.field_gallery_logos_class.0 }}">
+    {% block content %}
+    <div class="grid"><!--
+      {% for key, item in content.field_gallery_logos_item if key|first != '#' %}
+    --><div class="grid__item width-tab--1of2 width-lap--1of3 width-desk--1of4">
+        <div class="gallery-logos__item {{ key + 1 }}">{{ item }}</div>
+      </div><!--
+      {% endfor %}
+    --></div>
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

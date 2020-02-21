@@ -1,0 +1,28 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+<div class="teaser-two-blocks">
+  {% block content %}
+  <div class="grid">
+    <div class="grid__item width-desk-wide--1of2">
+      <div class="teaser-two-blocks__img">
+        {{ content.field_teaser_two_blocks_img }}
+      </div>
+    </div><!--
+    --><div class="grid__item width-desk-wide--1of2">
+      <div class="teaser-two-blocks__inner">
+        <div class="teaser-two-blocks__text-small">{{ content.field_teaser_two_blocks_text_sma.0 }}</div>
+        <h2 class="teaser-two-blocks__headline">{{ content.field_teaser_two_blocks_headline.0 }}</h2>
+        <div class="teaser-two-blocks__button">{{ content.field_teaser_two_blocks_button.0 }}</div>
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+</div>
+{% endblock paragraph %}

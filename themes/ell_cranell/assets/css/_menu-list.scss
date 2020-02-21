@@ -1,0 +1,31 @@
+.menu-list{
+  margin: $baseUnit*3 0;
+  @include media($breakTablet){
+    margin: $baseUnit*4.5 0 $baseUnit*6;
+  }
+  &__headline{
+    @extend .heading-6;
+    text-align: center;
+    border-bottom: 3px solid $colorMain;
+    padding: $baseUnit 0;
+    margin-bottom: 0;
+  }
+  &__link{
+    margin: 0;
+    list-style: none;
+    &__items{
+      border-bottom: 1px solid $colorMain;
+      a{
+        @extend .text--large;
+        color: $colorMain;
+        display: block;
+        padding: $baseUnit/1.5 0;
+        padding-left: 20px;
+        @include media($breakTablet){
+          padding: $baseUnit 0;
+          padding-left: 30px;
+        }
+      }
+    }
+  }
+}

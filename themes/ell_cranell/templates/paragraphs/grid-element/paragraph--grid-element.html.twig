@@ -1,0 +1,22 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  <div class="grid-element {{ content.field_grid_element_class.0 }}">
+    {% block content %}
+      <div class="grid {{ content.field_grid_element_options.0 }}">
+        <div class="grid__item width--1of1 width-{{ content.field_grid_element_responsive.0 }}--{% if content.field_grid_left.0|length == 0 %}6{% else %}{{content.field_grid_left.0 }}{% endif %}of12">
+          {{ content.field_grid_element_left }}
+        </div><!--
+        --><div class="grid__item width--1of1 width-{{ content.field_grid_element_responsive.0 }}--{% if content.field_grid_right.0|length == 0 %}6{% else %}{{content.field_grid_right.0 }}{% endif %}of12">
+          {{ content.field_grid_element_right }}
+        </div>
+      </div>
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

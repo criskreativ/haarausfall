@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'Gotham-Book';
+  src: url('../fonts/Gotham-Book.svg') format('svg'),
+      url('../fonts/Gotham-Book.woff') format('woff'),
+      url('../fonts/Gotham-Book.eot') format('eot'),
+      url('../fonts/Gotham-Book.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Gotham-Bold';
+  src: url('../fonts/Gotham-Bold.svg') format('svg'),
+      url('../fonts/Gotham-Bold.woff') format('woff'),
+      url('../fonts/Gotham-Bold.eot') format('eot'),
+      url('../fonts/Gotham-Bold.ttf') format('truetype');
+}
+
+body {
+  font-weight: 300;
+  color: $colorText;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: $fontPrimary;
+  strong{
+    font-family: $fontSecundary;
+    font-weight: 600;
+  }
+}
+
+h3,
+.heading-3,
+%heading-3 {
+  font-size: $headingSize3 - 9px;
+  line-height: $lineHeight3 - 9px;
+  margin-bottom: $baseUnit;
+  color: $colorMain;
+  font-weight: 500;
+  display: block;
+  letter-spacing: -.04em;
+  @include media($breakTablet){
+    font-size: $headingSize3;
+    line-height: $lineHeight3;
+  }
+}
+
+h6,
+.heading-6,
+%heading-6 {
+  font-family: $fontSecundary;
+  font-size: $headingSize6;
+  line-height: $lineHeight6;
+  margin-bottom: $baseUnit;
+  color: $colorMain;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: .1em;
+  display: block;
+}

@@ -1,0 +1,27 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  <div class="image-breakout {% if '2' in content.field_image_breakout_space_top.0 %}image-breakout--space-top{% endif %}">
+    {% block content %}
+    <div class="image-breakout__background" style="background-image: url('/sites/default/files/uploads/images/{{ content.field_image_breakout_item.0 }}')"></div>
+
+    <div class="image-breakout__content">
+      {% if content.field_image_breakout_text.0 %}
+      <h3 class="image-breakout__text">{{ content.field_image_breakout_text.0 }}</h3>
+      {% endif %}
+      {% if content.field_image_breakout_svg.0 %}
+      <div class="image-breakout__svg image-breakout__svg--{{ content.field_svg_position.0 }}">
+        {{ content.field_image_breakout_svg.0 }}
+      </div>
+      {% endif %}
+    </div>
+
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

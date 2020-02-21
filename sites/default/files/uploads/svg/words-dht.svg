@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="words-dht" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="280px" height="280px"
+	 viewBox="0 0 268.5 286" style="enable-background:new 0 0 268.5 286;" xml:space="preserve">
+<style type="text/css">
+
+	.st0{fill:none;stroke:#68207C;stroke-width:5;}
+
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+
+	.st2{fill:none;stroke:#68207C;stroke-width:5;}
+
+	@keyframes words_1 {
+		0%{
+			opacity: 1;
+		}
+		12.5%{
+			opacity: 1;
+		}
+		12.6%{
+			opacity: 0;
+		}
+		100%{
+			opacity: 0;
+		}
+	}
+	@keyframes words_2 {
+		0%{
+			opacity: 0;
+		}
+		12.5%{
+			opacity: 0;
+		}
+		12.6%{
+			opacity: 1;
+		}
+		37.5%{
+			opacity: 1;
+		}
+		37.6%{
+			opacity: 0;
+		}
+		100%{
+			opacity: 0;
+		}
+	}
+	@keyframes words_3 {
+		0%{
+			opacity: 0;
+		}
+		24%{
+			opacity: 0;
+		}
+		25%{
+			opacity: 1;
+		}
+		49%{
+			opacity: 1;
+		}
+		50%{
+			opacity: 0;
+		}
+		100%{
+			opacity: 0;
+		}
+	}
+	@keyframes words_4 {
+		0%{
+			opacity: 0;
+		}
+		49%{
+			opacity: 0;
+		}
+		50%{
+			opacity: 1;
+		}
+		74%{
+			opacity: 1;
+		}
+		75%{
+			opacity: 0;
+		}
+		100%{
+			opacity: 0;
+		}
+	}
+	@keyframes words_5 {
+		0%{
+			opacity: 0;
+		}
+		62.4%{
+			opacity: 0;
+		}
+		62.5%{
+			opacity: 1;
+		}
+		87.4%{
+			opacity: 1;
+		}
+		87.5%{
+			opacity: 0;
+		}
+		100%{
+			opacity: 0;
+		}
+	}
+	@keyframes words_6 {
+		0%{
+			opacity: 0;
+		}
+		74%{
+			opacity: 0;
+		}
+		75%{
+			opacity: 1;
+		}
+		100%{
+			opacity: 1;
+		}
+	}
+	@keyframes words_7 {
+		0%{
+			opacity: 0;
+		}
+		87.4%{
+			opacity: 0;
+		}
+		87.5%{
+			opacity: 1;
+		}
+		100%{
+			opacity: 1;
+		}
+	}
+
+
+
+	#word-1{
+		animation: words_1 10s infinite;
+	}
+	#word-2{
+		animation: words_2 10s infinite;
+	}
+	#word-3{
+		animation: words_3 10s infinite;
+	}
+	#word-4{
+		animation: words_4 10s infinite;
+	}
+	#word-5{
+		animation: words_5 10s infinite;
+	}
+	#word-6{
+		animation: words_6 10s infinite;
+	}
+	#word-7{
+		animation: words_7 10s infinite;
+	}
+
+
+
+</style>
+<path id="word-1" class="st0" d="M3.3,282.8h111.5c87.9,0,148.7-61.2,148.7-139.9v-0.8C263.6,63.3,202.8,3,114.8,3H3.3V282.8z
+	 M69.1,227.2V58.5h45.8c50.4,0,84.4,34.8,84.4,84.4v0.8c0,49.6-34,83.6-84.4,83.6L69.1,227.2L69.1,227.2z"/>
+<path id="word-2" class="st1" d="M3.7,282.8h110.9c88,0,148.7-61.2,148.7-139.9v-0.8C263.4,63.3,202.6,3,114.6,3H3.7V282.8z
+	 M68.9,227.2V58.5h45.8c50.4,0,84.4,34.8,84.4,84.4v0.8c0,49.6-34,83.6-84.4,83.6L68.9,227.2L68.9,227.2z"/>
+<path id="word-3" class="st2" d="M4.1,283.5h66.4V170.6H199v112.9h65.8V2.5H199v111.3H70.5V2.5H4.1V283.5z"/>
+<path id="word-4" class="st1" d="M4.1,283.5h66.4V170.5h128.1v113.1H265V2.5h-66.4V114H70.5V2.5H4.1L4.1,283.5L4.1,283.5z"/>
+<path id="word-5" class="st2" d="M102.7,282.3h58.6V59.3h103.2V2.5H2.5v56.8h100.2V282.3z"/>
+<path id="word-6" class="st1" d="M103.7,282.9h57.5V58.7h102.6V3.1H3.5v55.6h100.2V282.9z"/>
+<path id="word-7" class="st2" d="M3.3,282.9h111.5c87.9,0,148.7-61.2,148.7-139.9v-0.8c0-78.8-60.8-139.1-148.7-139.1H3.3V282.9z
+	 M69.1,227.4V58.7h45.8c50.4,0,84.4,34.8,84.4,84.4v0.8c0,49.6-34,83.6-84.4,83.6L69.1,227.4L69.1,227.4z"/>
+</svg>

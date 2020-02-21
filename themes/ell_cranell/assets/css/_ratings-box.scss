@@ -1,0 +1,26 @@
+.ratings-box{
+  display: block;
+  width: 250px;
+  height: 180px;
+  box-shadow: $baseShadow;
+  margin: $baseUnit 4px;
+  padding: 38px 20px 30px;
+  text-align: center;
+  background-color: $colorWhite;
+  &__name{
+    @extend .heading-5;
+    margin: 0;
+  }
+  &__number{
+    @extend .heading-6;
+    margin: 0;
+  }
+  &__stars{
+    display: inline-block;
+    margin: 22px auto 15px;
+    transform: scale(1.1);
+  }
+  &__link{
+    display: block;
+  }
+}

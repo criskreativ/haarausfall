@@ -1,0 +1,15 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  <div class="hero-slider hero-slider-slider owl-carousel">
+    {% block content %}
+    {{ content.field_hero_slider_slider }}
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

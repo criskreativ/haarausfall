@@ -1,0 +1,30 @@
+.testimonials{
+  padding: $baseUnit 0;
+  &__stars{
+    margin-bottom: $baseUnit;
+    .stars{
+      font-size: 30px;
+    }
+  }
+  &__headline{
+    @extend .heading-4;
+    margin-bottom: $baseUnit/2;
+  }
+  &__link{
+    background-image: none !important;
+    position: relative;
+    &:before{
+      content: '';
+      display: block;
+      width: 20px;
+      height: 15px;
+      position: absolute;
+      top: 6px;
+    }
+    a{
+      color: $colorMain;
+      @extend .btn--arrow;
+      text-transform: uppercase;
+    }
+  }
+}

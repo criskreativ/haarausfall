@@ -1,0 +1,32 @@
+.hero-video{
+  @extend .breakout;
+  &__desktop,
+  &__mobil{
+    video{
+      display: block;
+      width: auto;
+      max-width: 100%;
+    }
+  }
+  &__mobile{
+    display: block;
+    @include media($breakDesktop){
+
+    }
+  }
+  &__desktop{
+    display: none;
+    @include media($breakLaptop){
+      display: block;
+    }
+  }
+  &__mobil{
+    display: block;
+    @include media($breakLaptop){
+      display: none;
+    }
+  }
+  &--space{
+    margin-bottom: $baseUnit*1.5;
+  }
+}

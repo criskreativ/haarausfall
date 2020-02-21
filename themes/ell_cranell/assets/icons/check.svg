@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10" height="8" viewBox="0 0 10 8">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Rechteck_8_Kopie_7" data-name="Rechteck 8 Kopie 7" class="cls-1" d="M394.646,4488.12l-5.036,5.49a1.074,1.074,0,0,1-1.605,0l-2.674-2.92a1.316,1.316,0,0,1,0-1.75,1.073,1.073,0,0,1,1.6,0l1.872,2.05,4.234-4.63a1.074,1.074,0,0,1,1.605,0A1.332,1.332,0,0,1,394.646,4488.12Z" transform="translate(-385 -4486)"/>
+</svg>

@@ -1,0 +1,49 @@
+.text-formatted{
+  ul{
+    margin: 0;
+    list-style: none;
+    li{
+      position: relative;
+      padding: $baseUnit 0 0 $baseUnit;
+      @extend .text--large;
+      &:before{
+        display: block;
+        content: '';
+        width: 8px;
+        height: 8px;
+        border: 1px solid $colorMain;
+        border-radius: 50%;
+        position: absolute;
+        top: 28px;
+        left: 0;
+        @include media($breakTablet){
+          top: 30px;
+        }
+      }
+    }
+  }
+}
+.text-formatted{
+  ol{
+    margin: 0;
+    padding-left: $baseUnit;
+    @include media($breakTablet){
+      padding-left: $baseUnit*2;
+    }
+    li{
+      position: relative;
+      padding: $baseUnit 0 0 $baseUnit;
+      @extend .text--large;
+      &:before{
+        display: block;
+        content: '';
+        width: 8px;
+        height: 29px;
+        background-color: $colorMain;
+        position: absolute;
+        top: 26px;
+        left: 0;
+      }
+    }
+  }
+}

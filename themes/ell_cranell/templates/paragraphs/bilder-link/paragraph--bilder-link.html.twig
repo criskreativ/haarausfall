@@ -1,0 +1,17 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  <div class="bilder-link">
+    {% block content %}
+    <a href="{{ content.field_bilder_link_url.0 }}" target="_blank">
+      {{ content.field_bilder_link_item.0 }}
+    </a>
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

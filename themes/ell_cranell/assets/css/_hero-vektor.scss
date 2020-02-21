@@ -1,0 +1,59 @@
+.hero-vektor{
+  @extend .breakout;
+  position: relative;
+  height: 472px;
+  margin-bottom: $baseUnit*1.5;
+  overflow: hidden;
+  background-color: $colorMain;
+  @include media($breakLaptop){
+    height: 472px;
+  }
+  @include media($breakDesktop){
+    background-image: linear-gradient($colorGradientPurple2);
+    height: 572px;
+  }
+  &__vektor{
+    display: block;
+    height: 372px;
+    position: relative;
+    background-color: $colorMain;
+    overflow: hidden;
+    @include media($breakLaptop){
+      height: 372px;
+    }
+    @include media($breakDesktop){
+      height: 572px;
+    }
+    img{
+      display: block;
+      position: absolute;
+      max-width: 670px;
+      max-height: 300px;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @include media($breakDesktop){
+        max-height: none;
+      }
+    }
+  }
+  &__headline{
+    @extend .heading-1;
+    color: $colorWhite;
+    margin: 0 auto;
+    width: calc(100% - 40px);
+    max-width: 500px;
+    @include media($breakDesktop){
+      width: 100%;
+      padding-left: 20px;
+      padding-top: 300px;
+      margin: 0;
+    }
+    @include media($breakDesktopWide + 200px){
+      max-width: 500px;
+      padding-left: 60px;
+      padding-top: 300px;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+.hero-slider{
+  @extend .breakout;
+  z-index: 0;
+  &__item{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 572px;
+    overflow: hidden;
+    &__image{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-size: cover;
+      background-position: center;
+    }
+    &__text{
+      height: 100%;
+      position: absolute;
+      width: 100%;
+      max-width: $constrainLarge;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 150px 20px 0;
+      &__small{
+        @extend .heading-3;
+      }
+      &__big p{
+        @extend .text--huge;
+        max-width: 470px;
+        sup{
+          font-size: 18px;
+          top: -30px;
+          @include media($breakLaptop){
+            top: -45px;
+          }
+        }
+      }
+      &__details{
+        position: absolute;
+        bottom: 25px;
+        left: 20px;
+        @extend .text--tiny;
+        color: $colorMain;
+      }
+    }
+  }
+  .owl-dots{
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    .owl-dot{
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: $colorWhite;
+      background-image: none !important;
+      border-radius: 50%;
+      margin: 0 6px;
+      &.active{
+        background-color: $colorMain;
+
+      }
+    }
+
+  }
+}

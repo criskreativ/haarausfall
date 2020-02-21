@@ -1,0 +1,6 @@
+.text-default{
+  margin-bottom: $baseUnit*2;
+  @include media($breakDesktop){
+    margin-bottom: $baseUnit*3.5;
+  }
+}

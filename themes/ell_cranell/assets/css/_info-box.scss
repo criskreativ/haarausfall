@@ -1,0 +1,33 @@
+.info-box{
+  box-shadow: $baseShadow;
+  margin-bottom: $baseUnit;
+  padding: $baseUnit*2 $baseUnit;
+  @include media($breakDesktop){
+    padding: 70px 55px;
+  }
+  &__headline{
+    @extend .heading-3;
+    margin-bottom: 5px;
+  }
+  &__text{
+    @extend .text--medium;
+    margin-bottom: $baseUnit*1.5;
+  }
+  &__link{
+    padding-left: 30px;
+    margin-bottom: 5px;
+    background-image: none !important;
+    position: relative;
+    line-height: 20px;
+    &:before{
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-position: center;
+    }
+  }
+}

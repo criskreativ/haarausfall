@@ -1,0 +1,51 @@
+.teaser-two-blocks{
+  @extend .breakout;
+  background-color: $colorMain;
+  &__img{
+    display: block;
+    position: relative;
+    width: 100%;
+    @include media($breakTablet){
+      overflow: hidden;
+      height: 455px;
+      img[widht],img[height]{
+        max-width: none;
+      }
+      img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 100%;
+      }
+    }
+  }
+  &__inner{
+    min-height: 255px;
+    padding-top: $baseUnit*2.5;
+    padding-left: $baseUnit;
+    @include media($breakTablet){
+      min-height: 455px;
+      padding-top: $baseUnit*5;
+      padding-left: $baseUnit*2;
+    }
+    @include media($breakDesktopWide){
+      padding-top: $baseUnit*5;
+      padding-left: $baseUnit*7.7;
+    }
+  }
+  &__text-small{
+    @extend .heading-5;
+    color: $colorWhite;
+  }
+  &__headline{
+    @extend .heading-2;
+    color: $colorWhite;
+    padding-right: 20px;
+  }
+  &__button a{
+    @extend .btn, .btn--white;
+    border: none;
+    padding: 0;
+  }
+}

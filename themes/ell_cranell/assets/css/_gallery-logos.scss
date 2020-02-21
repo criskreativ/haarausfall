@@ -1,0 +1,20 @@
+.gallery-logos{
+  margin: $baseUnit*2 0 $baseUnit*4;
+  .grid__item{
+    vertical-align: middle;
+  }
+  .bilder-link{
+    .field__item{
+      margin: 0 auto;
+    }
+    img{
+      width: auto;
+      max-width: 200px;
+      max-height: 90px;
+    }
+  }
+  &__item{
+    margin-bottom: $baseUnit*2;
+    text-align: center;
+  }
+}

@@ -1,0 +1,164 @@
+/**
+ * style.scss
+ *
+ * Author: Marian Friedmann
+ *
+ */
+
+/**
+ * basicss overrides
+ *
+ * any defaults in basicss/basicss/_settings.scss
+ * may be overridden...
+ *
+ * e.g. $prototyping: true;
+ */
+
+$constrainObject: true;
+$gridObject: true;
+$mediaObejct: true;
+
+$headingSize1: 60px;
+$headingSize2: 40px;
+$headingSize3: 30px;
+$headingSize4: 20px;
+$headingSize5: 15px;
+$headingSize6: 13px;
+
+$fontPrimary: 'Gotham-Book';
+$fontSecundary: 'Gotham-Bold';
+$baseFontSize: 18px;
+$largeFontSize: 22px;
+$mediumFontSize: 20px;
+$smallFontSize: 15px;
+$tinyFontSize: 14px;
+$specialFontSize: 13px;
+$hugeFontSize: 80px;
+
+$lineHeight1: 50px;
+$lineHeight2: 40px;
+$lineHeight3: 35px;
+$lineHeight4: 22px;
+$lineHeight5: 18px;
+$lineHeight6: 16px;
+
+$baseLineHeight: 25px;
+$largeLineHeight: 31px;
+$mediumLineHeight: 30px;
+$smallLineHeight: 21px;
+$tinyLineHeight: 18px;
+$hugeLineHeight: 75px;
+
+$constrainLarge: 1320px;
+$constrainMedium: 1020px;
+$constrainSmall: 890px;
+
+$pageMaxWidth: 2000px;
+
+$colorMain: #691f83;
+$colorMain2: #4e186c;
+$colorMain3: #823693;
+$colorGrey: #5e5e5e;
+$colorGrey2: #7f7f7f;
+$colorGrey3: #e8e8e8;
+$colorWhite: #FFFFFF;
+
+$colorText: $colorGrey;
+$colorLink: $colorMain;
+$colorLinkHover: $colorMain2;
+$colorBorder: $colorGrey3;
+
+$colorGradientPurple: 110deg, rgb(130,54,147) 0%, rgb(78,24,108) 100%;
+$colorGradientPurple2: 110deg, rgb(78,24,108) 0%, rgb(130,54,147) 100%;
+$colorGradientWhite: 120deg, rgb(255,255,255) 0%, rgb(240,232,245) 100%;
+$colorGradientWhite2: 115deg, rgb(240,232,245) 0%, rgb(255,255,255) 100%;
+
+$baseShadow: 0px 6px 10px 0px rgba(64, 64, 64, 0.15);
+
+$baseUnit: 20px;
+
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 481px,
+  md: 721px,
+  lg: 1024px,
+  xl: 1200px,
+);
+
+/**
+ * basicss import
+ */
+
+@import 'bower_components/basicss/basicss';
+@import 'bower_components/owl.carousel/src/scss/owl.carousel.scss';
+
+
+
+/**
+ * userstyle imports
+ *
+ * e.g. @import 'nav';
+ */
+
+// backend
+@import "backend";
+@import "breadcrumb";
+
+// Important
+@import "typo";
+@import "wrapper";
+@import "general";
+@import "breakout";
+@import "block";
+@import "mobile-popup";
+@import "navigation-mobile";
+@import "navigation";
+
+
+@import "header";
+@import "btn";
+@import "form";
+@import "stars";
+@import "checkered";
+@import "review";
+@import "review";
+@import "review-box";
+@import "footer";
+@import "subnavigation";
+@import "burger";
+@import "border";
+
+
+// New
+@import "teaser-breakout";
+@import "teaser-two-blocks";
+@import "teaser-box";
+@import "facts";
+@import "hero-video";
+@import "hero-default";
+@import "hero-button";
+@import "hero-slider";
+@import "hero-vektor";
+@import "testimonials";
+@import "list";
+@import "checker";
+@import "menu-list";
+@import "image-breakout";
+@import "headline-default";
+@import "text-default";
+@import "image-default";
+@import "gallery-logos";
+@import "trolley";
+@import "grid-element";
+@import "nav-anchor";
+@import "ratings-box";
+@import "slider-rating";
+@import "block-erfahrungsberichte";
+@import "kontaktformular";
+@import "kunden-erfahrungen";
+@import "info-box";
+@import "gradient";
+@import "quiz";
+@import "logo-details";
+@import "eu-cookie-compliance-banner";

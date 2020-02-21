@@ -1,0 +1,60 @@
+.slider-rating{
+  display: block;
+  &__item{
+    margin-top: $baseUnit*2;
+    position: relative;
+    @include media($breakTablet){
+      margin-left: -5px;
+      max-width: calc(100% - 50px);
+    }
+    @include media($breakDesktop){
+      max-width: 800px;
+      margin-top: $baseUnit*4;
+    }
+    .ratings-box{
+      @include media(max-width $breakTablet){
+        margin: $baseUnit/2 auto;
+      }
+    }
+    .field__items{
+      display: block;
+      margin: 0 5px;
+      .field__item{
+        display: inline-block;
+        margin: 0 5px;
+      }
+    }
+  }
+  .owl-nav{
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    .owl-prev{
+      display: none;
+    }
+    .owl-next{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      display: block;
+      width: 21px;
+      height: 14px;
+      outline: none;
+      background-position: center;
+      background-size: contain;
+      right: 10px;
+      @include media($breakTablet){
+        right: -20px;
+      }
+      @include media($breakDesktop){
+        right: -40px;
+      }
+      span{
+        display: none;
+      }
+    }
+  }
+}

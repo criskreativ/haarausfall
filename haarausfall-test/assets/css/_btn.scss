@@ -1,0 +1,88 @@
+.btn{
+  // width: 208px;
+  min-width: 150px;
+  background: linear-gradient($colorGradientPurple);
+  display: inline-block;
+  text-align: center;
+  color: $colorWhite;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+  box-shadow: $baseShadow;
+  border-radius: 0;
+  border: 0;
+  outline: none;
+  line-height: 28px;
+  height: 28px;
+  font-size: 14px;
+  padding: 0 10px;
+  @include media($breakTablet){
+    min-width: 200px;
+    font-size: 16px;
+    height: 48px;
+    line-height: 48px;
+  }
+  &:before{
+    background: linear-gradient(110deg,rgb(78,24,108) 0%, rgb(78,24,108) 100%);
+    content: '';
+    opacity: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    position: absolute;
+    transition: opacity 0.2s ease-in-out;
+  }
+  &:hover{
+    text-decoration: none;
+    color: $colorWhite;
+    &:before{
+      opacity: 1;
+    }
+  }
+
+  &__arrow{
+    display: inline-block;
+    background-image: none !important;
+    box-shadow: none;
+    position: relative;
+    color: $colorMain;
+    background-color: $colorWhite !important;
+    @extend .heading-6;
+    font-size: $headingSize6;
+    line-height: 56px !important;
+    text-transform: uppercase;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 46px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    border-radius: 0;
+    border: 0;
+    outline: none;
+    margin: 0;
+    @include media($breakTablet){
+      height: 48px;
+      line-height: 48px;
+    }
+    &:hover{
+      color: $colorMain;
+      text-decoration: underline;
+    }
+    span{
+      background-image: url('../icon/arrow-purple.svg');
+      background-position: center;
+      display: block;
+      width: 20px;
+      height: 15px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      opacity: 1;
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+}

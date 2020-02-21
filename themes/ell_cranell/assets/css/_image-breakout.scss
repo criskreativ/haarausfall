@@ -1,0 +1,85 @@
+.image-breakout{
+  @extend .breakout;
+  margin-bottom: $baseUnit*3;
+  &__content{
+    width: 100%;
+    max-width: $constrainMedium + 40px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 40px 20px 0;
+    @include media($breakLaptop){
+      padding: 100px 20px 0;
+    }
+    @include media($breakDesktop){
+      padding: 120px 20px 0;
+    }
+  }
+  &__text{
+    @extend .heading-2;
+    color: $colorWhite;
+  }
+  &__svg{
+    display: block;
+    img{
+      display: block;
+      max-height: 100px;
+      @include media($breakTablet){
+        height: auto;
+        max-height: 140px;
+      }
+      @include media($breakDesktop){
+        max-height: none;
+      }
+    }
+    &--left img{
+      margin-left: 0;
+      margin-right: auto;
+    }
+    &--center img{
+      margin: 0 auto;
+    }
+    &--right img{
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+  &__background{
+    background-position: center;
+    background-size: cover;
+    height: 220px;
+    @include media($breakTablet){
+      height: 287px;
+    }
+    @include media($breakLaptop){
+      height: 387px;
+    }
+    @include media($breakDesktop){
+      height: 487px;
+    }
+  }
+  &--text{
+    .image-breakout{
+      &__background{
+        height: 220px;
+        @include media($breakTablet){
+          height: 287px;
+        }
+        @include media($breakLaptop){
+          height: 387px;
+        }
+        @include media($breakDesktop){
+          height: 487px;
+        }
+      }
+    }
+  }
+  &--space-top{
+    .image-breakout__content{
+      @include media($breakDesktop){
+        padding: 180px 20px 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.gradient{
+  &--white, &--purple{
+    margin: 0;
+    position: relative;
+    padding: $baseUnit*3 0;
+    @include media($breakDesktop){
+      padding: $baseUnit*5 0;
+    }
+    &:before{
+      content: '';
+      display: block;
+      width: 100vw;
+      height: 100%;
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient($colorGradientWhite);
+    }
+  }
+  &--purple{
+    &:before{
+      background: linear-gradient($colorGradientPurple);
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6{
+      color: $colorWhite;
+    }
+  }
+}

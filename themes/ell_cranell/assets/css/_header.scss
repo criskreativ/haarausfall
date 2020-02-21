@@ -1,0 +1,24 @@
+.header{
+  display: block;
+  width: 100%;
+  height: 125px;
+  position: relative;
+  padding: 40px 0;
+  z-index: 1;
+  @include media($breakDesktop){
+    margin: 0 auto;
+    width: 100%;
+    max-width: $constrainLarge;
+  }
+  &__logo{
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    @include media($breakDesktop){
+      top: 20px;
+      z-index: 10;
+    }
+  }
+}

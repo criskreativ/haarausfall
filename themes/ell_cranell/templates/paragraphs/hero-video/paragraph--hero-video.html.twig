@@ -1,0 +1,22 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  <div class="hero-video {% if '1' in content.field_hero_video_space.0 %}hero-video--space{% endif %}">
+    {% block content %}
+    <div class="hero-video__inner">
+      <div class="hero-video__desktop">
+        {{ content.field_hero_video_desktop }}
+      </div>
+      <div class="hero-video__mobil">
+        {{ content.field_hero_video_mobil }}
+      </div>
+    </div>
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

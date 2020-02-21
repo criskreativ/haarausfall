@@ -1,0 +1,140 @@
+.kontaktformular{
+  padding: $baseUnit*5 0;
+  max-width: $constrainMedium;
+  margin: 0 auto;
+  position: relative;
+  @extend .clearfix;
+  @include media($breakDesktop){
+    padding: 85px 0 170px;
+  }
+  &:before{
+    content: '';
+    display: block;
+    width: 100vw;
+    height: 100%;
+    background: linear-gradient($colorGradientWhite);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+  &__left, &__right{
+    display: inline-block;
+    width: 100%;
+    margin-bottom: $baseUnit;
+    @include media($breakDesktop){
+      width: 50%;
+      float: left;
+      padding-right: 10px;
+    }
+  }
+  &__right{
+    @include media($breakDesktop){
+      padding-right: 0;
+      padding-left: 10px;
+    }
+  }
+  form{
+    .js-form-item{
+      position: relative;
+      margin-right: 0;
+      label{
+        z-index: 2;
+        display: block;
+        @extend .heading-6;
+        position: absolute;
+        top: 22px;
+        right: 20px;
+        color: $colorWhite;
+        pointer-events: none;
+        opacity: 0;
+        transition: .4s ease-in-out;
+      }
+      &.widget-content{
+        .uniform-input, .form-email, .form-textarea{
+          position: relative !important;
+          background: linear-gradient( 110deg, rgb(78,24,108) 0%, rgb(130,54,147) 100%);
+          color: $colorWhite;
+          &::placeholder{
+            color: $colorWhite;
+          }
+        }
+        label{
+          opacity: 1;
+        }
+      }
+    }
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+      border: 0;
+      -webkit-text-fill-color: $colorWhite;
+      -webkit-box-shadow: 0 0 0px 1000px $colorMain inset;
+      transition: background-color 5000s ease-in-out 0s;
+    }
+
+
+    .uniform-input, .form-email, .form-textarea{
+      width: 100%;
+      display: block;
+      position: relative;
+      height: 60px;
+      margin: 0;
+      margin-bottom: 10px;
+      background-color: $colorWhite;
+      box-shadow: inset 0px 0px 8px 0px rgba(64, 64, 64, 0.15);
+      padding: 20px;
+      border: 0;
+      outline: none;
+      background-position: -9999px;
+      @extend .heading-4;
+      // cursor: pointer;
+      &:focus{
+        background: linear-gradient( 110deg, rgb(78,24,108) 0%, rgb(130,54,147) 100%);
+        color: $colorWhite;
+        &::placeholder{
+          color: $colorWhite;
+        }
+      }
+    }
+    .form-textarea{
+      min-height: 200px;
+      resize: none;
+      border: 0;
+      box-shadow: none;
+    }
+
+
+    .form-item-datenschutz{
+      @include media($breakDesktop){
+        display: inline-block;
+        padding-left: $baseUnit;
+        width: 50%;
+      }
+      @extend .text--tiny;
+      .field-prefix{
+        line-height: 28px;
+      }
+      label{
+        @extend .invisible;
+      }
+    }
+    .webform-actions{
+      @include media($breakDesktop){
+        display: inline-block;
+        float: right;
+      }
+      .form-submit{
+        display: inline-block;
+        @extend .btn;
+      }
+    }
+  }
+}

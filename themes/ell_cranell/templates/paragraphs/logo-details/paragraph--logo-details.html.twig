@@ -1,0 +1,28 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  <div class="logo-details {{ content.field_logo_details_class.0 }}">
+    {% block content %}
+    <div class="logo-details__box">
+      <div class="logo-details__item">
+        {{ content.field_logo_details_item.0 }}
+      </div>
+      <div class="logo-details__headline">
+        {{ content.field_logo_details_headline.0 }}
+      </div>
+      <div class="logo-details__text">
+        {{ content.field_logo_details_text.0 }}
+      </div>
+      <div class="logo-details__text-small">
+        {{ content.field_logo_details_text_small.0 }}
+      </div>
+    </div>
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

@@ -1,0 +1,42 @@
+.kunden-erfahrungen{
+  &--constrain{
+    @include media($breakDesktop){
+      padding-right: 320px;
+    }
+  }
+  &--ratings{
+    display: block;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    .field__items{
+      text-align: center;
+      @include media($breakDesktop){
+        overflow: hidden;
+        height: 820px;
+        position: absolute;
+        right: 0;
+        top: -670px;
+      }
+      .field__item{
+        display: inline-block;
+        @include media($breakDesktop){
+          display: block;
+        }
+      }
+    }
+    .text-default {
+      margin: $baseUnit 0 $baseUnit*3;
+      @include media($breakDesktop){
+        position: absolute;
+        max-width: 250px;
+        right: 0;
+        top: 200px;
+      }
+      @include media($breakDesktopWide + 400px){
+        max-width: 330px;
+        right: -80px;
+      }
+    }
+  }
+}

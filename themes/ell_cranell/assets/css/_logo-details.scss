@@ -1,0 +1,27 @@
+.logo-details{
+  margin: $baseUnit 0 $baseUnit*1.5;
+  &__grid{
+  }
+  &__box{
+    text-align: center;
+  }
+  &__item{
+    max-width: 90px;
+    margin: 0 auto $baseUnit/2;
+    @include media($breakTablet){
+      max-width: 135px;
+    }
+  }
+  &__headline{
+    @extend .text--small--purple;
+    font-weight: 600;
+  }
+  &__text{
+    @extend .text--small;
+    margin-bottom: $baseUnit/3;
+  }
+  &__text-small{
+    @extend .text--tiny;
+    font-size: 9px;
+  }
+}

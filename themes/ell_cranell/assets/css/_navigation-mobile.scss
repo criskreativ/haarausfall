@@ -1,0 +1,106 @@
+.navigation-mobile {
+  margin-bottom: 40px;
+  margin-top: 50px;
+  &.menu--navigation-primary{
+    display: block;
+    ul{
+      padding: 0 20px;
+      li{
+        border-bottom: 1px solid $colorBorder;
+        display: block;
+        width: 100%;
+        text-align: left;
+        a{
+          line-height: 25px;
+          padding: 15px 20px;
+          display: block;
+          &:hover{
+            text-decoration: none;
+          }
+        }
+      }
+      .submenu__content{
+        display: block;
+        height: 55px;
+        position: relative;
+        &__swipe{
+          position: absolute;
+          top: 0;
+          right: 0;
+          display: block;
+          width: 40px;
+          height: 55px;
+          background-image: none !important;
+          &:before{
+            display: block;
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 20px;
+            width: 9px;
+            height: 15px;
+            background-position: center;
+            background-size: contain;
+          }
+        }
+      }
+    }
+  }
+  ul{
+    &.level_1, &.level_2, &.level_3 {
+      >li:first-child {
+        border-top: 1px solid $colorBorder;
+      }
+    }
+    &.level_2{
+      >li:first-child {
+        margin-top: 100px;
+        body.user-logged-in & {
+          margin-top: 0;
+        }
+        body.toolbar-tray-open & {
+          margin-top: 0;
+        }
+      }
+    }
+    &.level_3{
+      >li:first-child {
+        margin-top: 100px;
+        body.user-logged-in & {
+          margin-top: 0;
+        }
+        body.toolbar-tray-open & {
+          margin-top: 0;
+        }
+      }
+    }
+    &:not(.level_1){
+      position: absolute;
+      width: 100vw;
+      left: 100%;
+      top: 0;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0s .3s linear;
+    }
+  }
+  &__active {
+    >ul {
+      opacity: 1 !important;
+      z-index: 1;
+      pointer-events: inherit !important;
+      transition: none !important;
+    }
+  }
+  &__back{
+    border-bottom: none;
+  }
+  &__headline{
+    color: $colorMain;
+    font-weight: 500;
+    padding: 0 20px;
+    line-height: 54px;
+    font-size: 24px;
+    border-bottom: none;
+  }
+}

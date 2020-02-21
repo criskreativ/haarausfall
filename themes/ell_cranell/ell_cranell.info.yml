@@ -1,0 +1,137 @@
+name: Ell Cranell
+description: Ell Cranell
+type: theme
+core: 8.x
+base theme: classy
+
+libraries:
+  - ell_cranell/global-styling
+
+regions:
+  header: Header
+  header_bottom: Header Bottom
+  hero: Hero
+  teaser_top: Teaser Top
+  user_menu: User menu
+  top_navbar_row_2:	Top Navbar Row 2
+  primary_menu: Primary menu
+  search: Search
+  highlighted: Highlighted
+  breadcrumb: Breadcrumb Ell-Cranell
+  content: Content
+  sidebar_first: Sidebar first
+  sidebar_second: Sidebar second
+  featured: Featured
+  featured_2: Featured 2
+  featured_3: Featured 3
+  featured_4: Featured 4
+  footer: Footer
+  footer_top: Footer Top
+  footer_first: Footer first
+  footer_second: Footer second
+  footer_third: Footer third
+  footer_fourth: Footer fourth
+  footer_fifth: Footer fifth
+  footer_bottom: Footer Bottom
+  mobile_navigation: Mobile Navigation
+  trolley: Trolley
+
+
+libraries-override:
+  system/base: false
+  system/admin: true
+  system/maintenance: false
+  system/drupal.system: false
+  system/drupal.system.modules: false
+  system/diff: false
+  system/drupal.system.date: false
+  contextual/drupal.contextual-links: false
+  quickedit/quickedit: false
+  views/views.module: true
+
+  classy/base:
+    css:
+      component:
+        css/components/action-links.css: false
+        css/components/breadcrumb.css: false
+        css/components/button.css: false
+        css/components/collapse-processed.css: false
+        css/components/container-inline.css: false
+        css/components/details.css: false
+        css/components/exposed-filters.css: false
+        css/components/field.css: false
+        css/components/form.css: false
+        css/components/icons.css: false
+        css/components/inline-form.css: false
+        css/components/item-list.css: false
+        css/components/link.css: false
+        css/components/links.css: false
+        css/components/menu.css: false
+        css/components/more-link.css: false
+        css/components/pager.css: false
+        css/components/tabledrag.css: false
+        css/components/tableselect.css: false
+        css/components/tablesort.css: false
+        css/components/tabs.css: false
+        css/components/textarea.css: false
+        css/components/ui-dialog.css: false
+
+  classy/book-navigation:
+    css:
+      component:
+        css/components/book-navigation.css: false
+
+  classy/dialog:
+    css:
+      component:
+        css/components/dialog.css: false
+
+  classy/dropbutton:
+    css:
+      component:
+        css/components/dropbutton.css: false
+
+  classy/file:
+    css:
+      component:
+        css/components/file.css: false
+
+  classy/forum:
+    css:
+      component:
+        css/components/forum.css: false
+
+  classy/image-widget:
+    css:
+      component:
+        css/components/image-widget.css: false
+
+  classy/indented:
+    css:
+      component:
+        css/components/indented.css: false
+
+  classy/messages:
+    css:
+      component:
+        css/components/messages.css: false
+
+  classy/node:
+    css:
+      component:
+        css/components/node.css: false
+
+  classy/progress:
+    css:
+      component:
+        css/components/progress.css: false
+
+  classy/search-results:
+    css:
+      component:
+        css/components/search-results.css: false
+
+  classy/user:
+    css:
+      component:
+        css/components/user.css: false

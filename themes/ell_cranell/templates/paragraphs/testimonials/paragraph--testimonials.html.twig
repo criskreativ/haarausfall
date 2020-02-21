@@ -1,0 +1,44 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  <div itemscope itemtype="http://schema.org/Product">
+    <meta itemprop="name" content="Alfatradiol">
+    <meta itemprop="brand" content="Ell-Cranell">
+    <meta itemprop="sku" content="PZN-09944694">
+    <meta itemprop="description" content="Ell-Cranell mit Alfatradiol ist ein verschreibungsfreies Arzneimittel zur Behandlung von anlagebedingtem (hormonell-erblichem) Haarausfall – der häufigsten Form von Haarausfall bei Männern und Frauen.">
+    <meta itemprop="image" content="/sites/default/files/upload/images/packshot.jpg">
+    <div class="testimonials" itemprop="review" itemscope itemtype="http://schema.org/Review">
+      <div class="testimonials__inner">
+        <meta itemprop="author" content="{{ content.field_testimonials_author.0 }}">
+        {% block content %}
+        {% if content.field_testimonials_stars %}
+          <div class="testimonials__stars" itemprop="reviewRating">
+            {{ content.field_testimonials_stars }}
+          </div>
+        {% endif %}
+        {% if content.field_testimonials_headline %}
+          <div class="testimonials__headline" itemprop="name">
+            {{ content.field_testimonials_headline }}
+          </div>
+        {% endif %}
+        {% if content.field_testimonials_body %}
+          <div class="testimonials__body" itemprop="description">
+            {{ content.field_testimonials_body }}
+          </div>
+        {% endif %}
+        {% if content.field_testimonials_link %}
+          <div class="testimonials__link icon--arrow-purple">
+            {{ content.field_testimonials_link }}
+          </div>
+        {% endif %}
+        {% endblock %}
+      </div>
+    </div>
+  </div>
+{% endblock paragraph %}

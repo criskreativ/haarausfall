@@ -1,0 +1,87 @@
+.mobile-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #FFF;
+  z-index: 249;
+  overflow-x: hidden;
+  padding: 39px 0;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: opacity .3s ease-in-out, transform 0s .3s linear;
+  body.user-logged-in & {
+    margin-top: 39px;
+  }
+  body.toolbar-tray-open & {
+    margin-top: 79px;
+  }
+  body.nav-open & {
+    transform: translateY(0);
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+  }
+  @include media($breakDesktop){
+    display: none;
+  }
+  &__close {
+    width: 33px;
+    height: 33px;
+    display: block;
+    position: absolute;
+    top: 46px;
+    right: 20px;
+    -webkit-appearance: none;
+    border: none;
+    background-position: center;
+    z-index: 250;
+    background-color: inherit;
+    &:focus {
+      outline: none;
+    }
+    &:after, &:before {
+      display: block;
+      content: '';
+      height: 3px;
+      width: 33px;
+      background-color: $colorMain;
+      position: absolute;
+      left: 0;
+      bottom: 15px;
+      transform: rotate(45deg);
+    }
+    &:before{
+      top: 15px;
+      transform: rotate(-45deg);
+    }
+  }
+  &__logo{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    display: block;
+    width: 82px;
+    height: 82px;
+  }
+  &__navigation {
+    margin: 0 0 $baseUnit;
+    // overflow: hidden;
+    width: 100vw;
+    &__inner {
+      position: relative;
+      transition: transform .3s ease-in-out;
+      padding-top: 50px;
+      @for $i from 1 through 10 {
+        .mobile-popup--level_#{$i} & {
+          transform: translateX($i*(-100%));
+        }
+      }
+    }
+  }
+}
+body{
+  &.nav-open{
+    overflow: hidden;
+  }
+}

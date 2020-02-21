@@ -1,0 +1,14 @@
+.pagination{
+  &__text{
+    margin-bottom: $baseUnit/2;
+  }
+  &__bar{
+    margin-bottom: $baseUnit*3.5;
+    background-color: $colorGrey3;
+    &__inner{
+      display: block;
+      height: 7px;
+      background: linear-gradient($colorGradientPurple);
+    }
+  }
+}

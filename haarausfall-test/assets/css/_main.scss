@@ -1,0 +1,28 @@
+.main{
+  display: block;
+  height: 100%;
+  padding: 70px $baseUnit;
+  position: relative;
+  // min-height: 700px;
+  @include media($breakLaptop){
+    min-height: 585px;
+    padding: 70px;
+  }
+  .footer{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 $baseUnit;
+    @include media($breakLaptop){
+      padding: 70px;
+    }
+    .btn{
+      float: right;
+    }
+    .btn__arrow{
+      float: left;
+    }
+  }
+}

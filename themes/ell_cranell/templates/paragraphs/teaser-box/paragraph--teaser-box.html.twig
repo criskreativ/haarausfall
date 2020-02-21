@@ -1,0 +1,51 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  <div class="teaser-box">
+    {% block content %}
+    <div class="constrain constrain--medium">
+      <div class="grid">
+        <div class="grid__item width-desk--1of3">
+          <div class="teaser-box__item">
+            <div class="teaser-box__img">
+              {{ content.field_teaser_box_img_1 }}
+            </div>
+            <h3 class="teaser-box__headline">{{ content.field_teaser_box_headline_1.0 }}</h3>
+            <div class="teaser-box__button">
+              {{ content.field_teaser_box_button_1 }}
+            </div>
+          </div>
+        </div><!--
+        --><div class="grid__item width-desk--1of3">
+          <div class="teaser-box__item">
+            <div class="teaser-box__img">
+              {{ content.field_teaser_box_img_2 }}
+            </div>
+            <h3 class="teaser-box__headline">{{ content.field_teaser_box_headline_2.0 }}</h3>
+            <div class="teaser-box__button">
+              {{ content.field_teaser_box_button_2 }}
+            </div>
+          </div>
+        </div><!--
+        --><div class="grid__item width-desk--1of3">
+          <div class="teaser-box__item">
+            <div class="teaser-box__img">
+              {{ content.field_teaser_box_img_3 }}
+            </div>
+            <h3 class="teaser-box__headline">{{ content.field_teaser_box_headline_3.0 }}</h3>
+            <div class="teaser-box__button">
+              {{ content.field_teaser_box_button_3 }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

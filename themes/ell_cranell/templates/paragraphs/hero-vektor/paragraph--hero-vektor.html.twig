@@ -1,0 +1,27 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  <div class="hero-vektor {{ content.field_hero_v_class.0 }}">
+    {% block content %}
+    <div class="grid grid--flush">
+      <div class="grid__item width-desk--1of2">
+        <div class="{% if content.field_hero_v_vektor_mobil %}width--0 width-tab--1of1{% endif %}">
+          <div class="hero-vektor__vektor">{{ content.field_hero_v_vektor.0 }}</div>
+        </div>
+        <div class="{% if content.field_hero_v_vektor_mobil %}width--1of1  width-tab--0{% endif %}">
+          <div class="hero-vektor__vektor">{{ content.field_hero_v_vektor_mobil.0 }}</div>
+        </div>
+      </div><!--
+      --><div class="grid__item width-desk--1of2">
+        <h1 class="hero-vektor__headline">{{ content.field_hero_v_headline.0 }}</h1>
+      </div>
+    </div>
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

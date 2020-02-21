@@ -1,0 +1,218 @@
+@font-face {
+  font-family: 'Gotham-Book';
+  src: url('../fonts/Gotham-Book.svg') format('svg'),
+      url('../fonts/Gotham-Book.woff') format('woff'),
+      url('../fonts/Gotham-Book.eot') format('eot'),
+      url('../fonts/Gotham-Book.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Gotham-Bold';
+  src: url('../fonts/Gotham-Bold.svg') format('svg'),
+      url('../fonts/Gotham-Bold.woff') format('woff'),
+      url('../fonts/Gotham-Bold.eot') format('eot'),
+      url('../fonts/Gotham-Bold.ttf') format('truetype');
+}
+
+  body {
+    font-weight: 300;
+    color: $colorText;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: $fontPrimary;
+    strong{
+      font-family: $fontSecundary;
+      font-weight: 500;
+    }
+  }
+
+  h1,
+  .heading-1,
+  %heading-1 {
+    // font-family: $fontSecundary;
+    font-size: $headingSize1 - 20px;
+    line-height: $lineHeight1 - 20px;
+    margin-bottom: $headingSize1 / 2;
+    color: $colorMain;
+    font-weight: 600;
+    display: block;
+    letter-spacing: -.04em;
+    @include media($breakTablet){
+      font-size: $headingSize1 - 10px;
+      line-height: $lineHeight1 - 10px;
+    }
+    @include media($breakDesktop){
+      font-size: $headingSize1 - 3px;
+      line-height: $lineHeight1 - 3px;
+      margin-bottom: $headingSize1 - 10px;
+    }
+    @include media($breakDesktopWide){
+      font-size: $headingSize1;
+      line-height: $lineHeight1;
+    }
+  }
+
+  h2,
+  .heading-2,
+  %heading-2 {
+    // font-family: $fontSecundary;
+    font-size: $headingSize2 - 19px;
+    line-height: $lineHeight2 - 19px;
+    margin-bottom: $baseUnit;
+    color: $colorMain;
+    font-weight: 600;
+    display: block;
+    // letter-spacing: -.04em;
+    @include media($breakTablet){
+      font-size: $headingSize2 - 10px;
+      line-height: $lineHeight2 - 10px;
+    }
+    @include media($breakLaptop){
+      font-size: $headingSize2;
+      line-height: $lineHeight2;
+    }
+  }
+
+  h3,
+  .heading-3,
+  %heading-3 {
+    // font-family: $fontSecundary;
+    font-size: $headingSize3 - 9px;
+    line-height: $lineHeight3 - 9px;
+    margin-bottom: $baseUnit;
+    color: $colorMain;
+    font-weight: 600;
+    display: block;
+    letter-spacing: -.04em;
+    @include media($breakTablet){
+      font-size: $headingSize3;
+      line-height: $lineHeight3;
+    }
+  }
+
+  h4,
+  .heading-4,
+  %heading-4 {
+    // font-family: $fontSecundary;
+    font-size: $headingSize4;
+    line-height: $lineHeight4;
+    margin-bottom: $baseUnit;
+    color: $colorMain;
+    font-weight: 600;
+    display: block;
+    letter-spacing: -.01em;
+  }
+
+  h5,
+  .heading-5,
+  %heading-5 {
+    font-family: $fontSecundary;
+    font-size: $headingSize5 - 6px;
+    line-height: $lineHeight5 - 6px;
+    margin-bottom: $baseUnit;
+    color: $colorMain;
+    display: block;
+    font-weight: 500;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    @include media($breakTablet){
+      font-size: $headingSize5;
+      line-height: $lineHeight5;
+    }
+  }
+
+  h6,
+  .heading-6,
+  %heading-6 {
+    font-family: $fontSecundary;
+    font-size: $headingSize6;
+    line-height: $lineHeight6;
+    margin-bottom: $baseUnit;
+    color: $colorMain;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    display: block;
+  }
+
+  .text, p{
+    font-size: $baseFontSize - 4px;
+    line-height: $baseLineHeight - 4px;
+    color: $colorGrey;
+    // letter-spacing: -1px;
+    @include media($breakTablet){
+      font-size: $baseFontSize;
+      line-height: $baseLineHeight;
+    }
+    &--large{
+      font-size: $largeFontSize - 8px;
+      line-height: $largeLineHeight - 8px;
+      color: $colorGrey;
+      letter-spacing: inherit;
+      @include media($breakTablet){
+        font-size: $largeFontSize - 4px;
+        line-height: $largeLineHeight - 4px;
+      }
+      @include media($breakLaptop){
+        font-size: $largeFontSize;
+        line-height: $largeLineHeight;
+      }
+      &--purple{
+        @extend .text--large;
+        color: $colorMain;
+      }
+    }
+    &--medium{
+      color: $colorGrey;
+      font-size: $mediumFontSize - 8px;
+      line-height: $mediumLineHeight - 8px;
+      @include media($breakTablet){
+        font-size: $mediumFontSize - 4px;
+        line-height: $mediumLineHeight - 4px;
+      }
+      @include media($breakLaptop){
+        font-size: $mediumFontSize;
+        line-height: $mediumLineHeight;
+      }
+      &--purple{
+        @extend .text--medium;
+        color: $colorMain;
+      }
+    }
+    &--small{
+      font-size: $smallFontSize;
+      line-height: $smallLineHeight;
+      color: $colorGrey;
+      letter-spacing: normal;
+      &--purple{
+        @extend .text--small;
+        color: $colorMain;
+      }
+    }
+    &--tiny{
+      letter-spacing: normal;
+      font-size: $tinyFontSize;
+      line-height: $tinyLineHeight;
+      color: $colorGrey;
+    }
+    &--special{
+      font-size: $specialFontSize;
+      font-weight: 500;
+    }
+    &--huge{
+      font-size: $hugeFontSize - 24px;
+      line-height: $hugeLineHeight - 24px;
+      color: $colorMain;
+      font-weight: 500;
+      margin-bottom: $baseUnit;
+      letter-spacing: -0.2rem;
+      @include media($breakTablet){
+        font-size: $hugeFontSize - 10px;
+        line-height: $hugeLineHeight - 10px;
+      }
+      @include media($breakLaptop){
+        font-size: $hugeFontSize;
+        line-height: $hugeLineHeight;
+      }
+    }
+  }

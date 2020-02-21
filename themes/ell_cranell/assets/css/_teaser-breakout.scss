@@ -1,0 +1,96 @@
+.teaser-breakout{
+  @extend .breakout;
+  overflow: hidden;
+  .grid{
+    max-width: calc(100% - 40px);
+    margin: 0 auto;
+    @include media($breakDesktopWide){
+      max-width: none;
+      margin: 0;
+    }
+  }
+  &__col{
+    position: relative;
+    min-height: 300px;
+    padding: 50px 55px 0;
+    background-color: $colorMain2;
+    &:nth-child(2){
+      background-color: $colorMain;
+    }
+    &:nth-child(3){
+      background-color: $colorMain3;
+    }
+    @include media($breakTablet){
+      min-height: 365px;
+      padding: 80px 95px 0;
+    }
+  }
+  &__headline{
+    position: relative;
+    color: $colorWhite;
+    @extend .heading-3;
+  }
+  &__link{
+    background-image: none !important;
+    position: relative;
+    &:before{
+      content: '';
+      display: block;
+      width: 20px;
+      height: 15px;
+      position: absolute;
+      top: 6px;
+    }
+    a{
+      display: block;
+      @extend .btn--arrow;
+      color: $colorWhite;
+      text-transform: uppercase;
+      &:hover{
+        color: $colorWhite;
+      }
+    }
+  }
+  &__img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    img{
+      display: block;
+    }
+  }
+  &__stars{
+    width: 161px;
+    height: 26px;
+    position: absolute;
+    right: 115px/$breakTablet*100%;
+    bottom: 100px/$breakTablet*100%;
+    .stars{
+      width: 161px;
+      height: 26px;
+      &__front{
+        background-size: 161px;
+      }
+    }
+    @include media($breakTablet){
+      right: 145px;
+      bottom: 100px;
+    }
+    @include media($breakLaptop){
+      right: 110px / $breakLaptop * 100%;
+      bottom: 100px;
+    }
+    @include media($breakDesktop){
+      right: 80px / 340px * 100%;
+      bottom: 60px;
+    }
+    @include media($breakDesktopWide){
+      right: 145px / 660px * 100%;
+      bottom: 75px;
+    }
+    @include media($breakDesktopWide + 400px){
+      right: 140px;
+      bottom: 100px;
+    }
+  }
+}

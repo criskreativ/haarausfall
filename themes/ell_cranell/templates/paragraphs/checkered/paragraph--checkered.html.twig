@@ -1,0 +1,38 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+<div class="checkered">
+  {% block content %}
+  <div class="grid grid--flush">
+    <div class="checkered__item grid__item width-lap--1of2">
+      <div class="checkered__img">
+        {{ content.field_checkered_img_1 }}
+      </div>
+    </div><!--
+    --><div class="checkered__item grid__item width-lap--1of2">
+      <h2 class="checkered__headline">{{ content.field_checkered_headline_1 }}</h2>
+      <p class="checkered__text">{{ content.field_checkered_text_1 }}</p>
+      <div class="checkered__link icon--arrow-purple">{{ content.field_checkered_link_1 }}</div>
+    </div>
+  </div>
+  <div class="grid grid--flush grid--reversed">
+    <div class="checkered__item grid__item width-lap--1of2">
+      <div class="checkered__img">
+        {{ content.field_checkered_img_2 }}
+      </div>
+    </div><!--
+    --><div class="checkered__item reversed grid__item width-lap--1of2">
+      <h2 class="checkered__headline">{{ content.field_checkered_headline_2 }}</h2>
+      <p class="checkered__text">{{ content.field_checkered_text_2 }}</p>
+      <div class="checkered__link icon--arrow-purple">{{ content.field_checkered_link_2 }}</div>
+    </div>
+  </div>
+  {% endblock %}
+</div>
+{% endblock paragraph %}
